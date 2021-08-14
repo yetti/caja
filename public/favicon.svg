@@ -1,0 +1,24 @@
+<svg version="1.1" viewBox="0 0 135.47 135.47" xmlns="http://www.w3.org/2000/svg">
+ <g id="logo-logo" transform="matrix(.54881 0 0 .49978 67.733 67.733)">
+  <g paint-order="stroke">
+   <g transform="matrix(.6158 0 0 -.6158 -5.1619 5.2022)">
+    <path transform="translate(-23.098 26.152)" d="m0 0 149.97 86.406-94.947 54.806-158.79-91.626v-183.26l103.77-59.847z" fill="#e2ad73" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+   <g transform="matrix(.6158 0 0 -.6158 -5.1613 -54.214)">
+    <path transform="translate(-23.1 -70.335)" d="m0 0 149.97 86.407-94.948 54.806-158.79-91.627 103.77-50.129z" fill="#c18346" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+   <g transform="matrix(.6158 0 0 -.6158 51.368 30.99)">
+    <path transform="translate(98.757 117.61)" d="m0 0-47.875 27.625-149.64-86.304 0.101-193.93 17.843-10.247v189.86l131.48 75.81 30.067-17.364c4.861 5.024 11.636 8.413 18.025 14.547" fill="#5790b3" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+   <g transform="matrix(.6158 0 0 -.6158 63.173 43.191)">
+    <path transform="translate(79.532 137.43)" d="m0 0-0.121 0.013-158.94-91.613v-183.25l0.121-0.014 158.94 91.614z" fill="#70abd1" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+   <g transform="matrix(.6158 0 0 -.6158 43.523 -64.123)">
+    <path transform="translate(-47.622 -54.786)" d="m0 0 95.243 54.767-94.76 54.805z" fill="#ad7037" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+   <g transform="matrix(.6158 0 0 -.6158 -48.844 -84.632)">
+    <path transform="translate(52.482,70.144)" d="m0 0-155.34-89.849 46.922-50.439 158.79 91.627z" fill="#e2ad73" stroke-linecap="round" paint-order="stroke"/>
+   </g>
+  </g>
+ </g>
+</svg>

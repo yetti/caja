@@ -1,0 +1,11 @@
+{
+  "baseUrl": "http://localhost:4000",
+  "fixturesFolder": "tests/fixtures",
+  "integrationFolder": "tests/integration",
+  "pluginsFile": "tests/plugins/index.ts",
+  "screenshotsFolder": "tests/screenshots",
+  "supportFile": "tests/support/index.ts",
+  "videosFolder": "tests/videos",
+  "testFiles": "**/*.spec.ts",
+  "componentFolder": "tests/components"
+}
