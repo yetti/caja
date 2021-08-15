@@ -52,7 +52,7 @@ const gameMenuMachine = createMachine<
   GameMenuEvent,
   GameMenuState
 >({
-  id: 'userMenu',
+  id: 'gameMenu',
   initial: 'idle',
   states: {
     idle: {
@@ -74,8 +74,6 @@ const gameMenuMachine = createMachine<
   },
 })
 
-export const useGameMenuMachine = function ({
-  state: string = {},
-}): GameMenuMachine {
+export const useGameMenuMachine = function (): GameMenuMachine {
   return useMachine(gameMenuMachine)
 }

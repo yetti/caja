@@ -133,16 +133,7 @@
     send({ type: 'CLOSE_PROFILE_MENU' })
   }
 
-  const persistedState = JSON.parse(
-    localStorage.getItem('profile-menu-state') ?? '{}'
-  )
-
-  const { state, send, service } = useProfileMenuMachine({
-    state: persistedState,
-  })
-  service.onTransition((state) => {
-    localStorage.setItem('profile-menu-state', JSON.stringify(state))
-  })
+  const { state, send } = useProfileMenuMachine()
 
   onClickOutside(target, (event) => closeMenu())
 </script>
