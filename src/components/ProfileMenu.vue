@@ -134,14 +134,14 @@
   }
 
   const persistedState = JSON.parse(
-    localStorage.getItem('user-menu-state') ?? '{}'
+    localStorage.getItem('profile-menu-state') ?? '{}'
   )
 
   const { state, send, service } = useProfileMenuMachine({
     state: persistedState,
   })
   service.onTransition((state) => {
-    localStorage.setItem('user-menu-state', JSON.stringify(state))
+    localStorage.setItem('profile-menu-state', JSON.stringify(state))
   })
 
   onClickOutside(target, (event) => closeMenu())
