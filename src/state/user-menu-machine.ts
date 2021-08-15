@@ -12,7 +12,7 @@ interface UserMenuContext {
   visible: false
 }
 
-type UserMenuEvent = { type: 'TOGGLE_VISIBILITY' }
+type UserMenuEvent = { type: 'TOGGLE_USER_MENU' } | { type: 'CLOSE_USER_MENU' }
 
 type UserMenuState =
   | {
@@ -27,8 +27,14 @@ type UserMenuState =
         visible: true
       }
     }
+  | {
+      value: 'hidden'
+      context: UserMenuContext & {
+        visible: false
+      }
+    }
 
-type UserMenuMachineService = {
+type UserMenuMachine = {
   state: Ref<
     State<
       UserMenuContext,
@@ -51,17 +57,18 @@ const userMenuMachine = createMachine<
   states: {
     idle: {
       on: {
-        TOGGLE_VISIBILITY: 'visible',
+        TOGGLE_USER_MENU: 'visible',
       },
     },
     visible: {
       on: {
-        TOGGLE_VISIBILITY: 'hidden',
+        TOGGLE_USER_MENU: 'hidden',
+        CLOSE_USER_MENU: 'hidden',
       },
     },
     hidden: {
       on: {
-        TOGGLE_VISIBILITY: 'visible',
+        TOGGLE_USER_MENU: 'visible',
       },
     },
   },
@@ -69,6 +76,6 @@ const userMenuMachine = createMachine<
 
 export const useUserMenuMachine = function ({
   state: string = {},
-}): UserMenuMachineService {
+}): UserMenuMachine {
   return useMachine(userMenuMachine)
 }

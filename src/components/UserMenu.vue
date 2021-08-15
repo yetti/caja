@@ -158,7 +158,11 @@
 
   const target = ref('')
   const toggleMenu = () => {
-    send({ type: 'TOGGLE_VISIBILITY' })
+    send({ type: 'TOGGLE_USER_MENU' })
+  }
+
+  const closeMenu = () => {
+    send({ type: 'CLOSE_USER_MENU' })
   }
 
   const persistedState = JSON.parse(
@@ -170,5 +174,5 @@
     localStorage.setItem('user-menu-state', JSON.stringify(state))
   })
 
-  onClickOutside(target, (event) => toggleMenu())
+  onClickOutside(target, (event) => closeMenu())
 </script>
