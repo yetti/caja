@@ -1,67 +1,37 @@
 <template>
-  <div class="px-3 mt-6 relative inline-block text-left">
-    <div ref="target">
+  <div class="ml-3 relative" ref="target">
+    <div>
       <button
         @click="toggleMenu()"
         type="button"
         class="
-          group
-          w-full
-          bg-gray-100
-          rounded-md
-          px-3.5
-          py-2
-          text-sm text-left
-          font-medium
-          text-gray-700
-          hover:bg-gray-200
+          max-w-xs
+          bg-white
+          flex
+          items-center
+          text-sm
+          rounded-full
           focus:outline-none
           focus:ring-2
           focus:ring-offset-2
-          focus:ring-offset-gray-100
           focus:ring-purple-500
         "
-        id="options-menu-button"
+        id="user-menu-button"
         aria-expanded="false"
         aria-haspopup="true"
       >
-        <span class="flex w-full justify-between items-center">
-          <span class="flex min-w-0 items-center justify-between space-x-3">
-            <img
-              class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
-              src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-              alt=""
-            />
-            <span class="flex-1 flex flex-col min-w-0">
-              <span class="text-gray-900 text-sm font-medium truncate"
-                >Jessy Schwarz</span
-              >
-              <span class="text-gray-500 text-sm truncate">@jessyschwarz</span>
-            </span>
-          </span>
-          <!-- Heroicon name: solid/selector -->
-          <svg
-            class="
-              flex-shrink-0
-              h-5
-              w-5
-              text-gray-400
-              group-hover:text-gray-500
-            "
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </span>
+        <span class="sr-only">Open user menu</span>
+        <img
+          class="h-8 w-8 rounded-full"
+          src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+          alt=""
+        />
       </button>
     </div>
+
+    <!--
+      Dropdown menu, show/hide based on menu state.
+    -->
     <transition
       enter-active-class="transition ease-out duration-100"
       enter-class="transform opacity-0 scale-95"
@@ -69,18 +39,15 @@
       leave-active-class="transition ease-in duration-75"
       leave-class="transform opacity-100 scale-100"
       leave-to-class="transform opacity-0 scale-95"
-      appear
     >
       <div
         v-show="state.matches('visible')"
         class="
-          z-10
-          mx-3
-          origin-top
+          origin-top-right
           absolute
           right-0
-          left-0
-          mt-1
+          mt-2
+          w-48
           rounded-md
           shadow-lg
           bg-white
@@ -90,7 +57,7 @@
         "
         role="menu"
         aria-orientation="vertical"
-        aria-labelledby="options-menu-button"
+        aria-labelledby="user-menu-button"
         tabindex="-1"
       >
         <div class="py-1" role="none">
@@ -100,7 +67,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-0"
+            id="user-menu-item-0"
             >View profile</a
           >
           <a
@@ -108,7 +75,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-1"
+            id="user-menu-item-1"
             >Settings</a
           >
           <a
@@ -116,7 +83,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-2"
+            id="user-menu-item-2"
             >Notifications</a
           >
         </div>
@@ -126,7 +93,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-3"
+            id="user-menu-item-3"
             >Get desktop app</a
           >
           <a
@@ -134,7 +101,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-4"
+            id="user-menu-item-4"
             >Support</a
           >
         </div>
@@ -144,7 +111,7 @@
             class="text-gray-700 block px-4 py-2 text-sm"
             role="menuitem"
             tabindex="-1"
-            id="options-menu-item-5"
+            id="user-menu-item-5"
             >Logout</a
           >
         </div>
@@ -154,23 +121,25 @@
 </template>
 
 <script setup lang="ts">
-  import { useUserMenuMachine } from '~/state/user-menu-machine'
+  import { useProfileMenuMachine } from '~/state/profile-menu-machine'
   import { onClickOutside } from '@vueuse/core'
 
   const target = ref('')
   const toggleMenu = () => {
-    send({ type: 'TOGGLE_USER_MENU' })
+    send({ type: 'TOGGLE_PROFILE_MENU' })
   }
 
   const closeMenu = () => {
-    send({ type: 'CLOSE_USER_MENU' })
+    send({ type: 'CLOSE_PROFILE_MENU' })
   }
 
   const persistedState = JSON.parse(
     localStorage.getItem('user-menu-state') ?? '{}'
   )
 
-  const { state, send, service } = useUserMenuMachine({ state: persistedState })
+  const { state, send, service } = useProfileMenuMachine({
+    state: persistedState,
+  })
   service.onTransition((state) => {
     localStorage.setItem('user-menu-state', JSON.stringify(state))
   })

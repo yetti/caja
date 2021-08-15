@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="props.visible"
+    v-show="props.visible"
     class="fixed inset-0 flex z-40 lg:hidden"
     role="dialog"
     aria-modal="true"
