@@ -52,7 +52,7 @@ const sidebarMachine = createMachine<
   SidebarEvent,
   SidebarState
 >({
-  id: 'userMenu',
+  id: 'sidebar',
   initial: 'idle',
   states: {
     idle: {

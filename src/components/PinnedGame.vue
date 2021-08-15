@@ -150,14 +150,7 @@
     send({ type: 'CLOSE_GAME_MENU' })
   }
 
-  const persistedState = JSON.parse(
-    localStorage.getItem('game-menu-state') ?? '{}'
-  )
-
-  const { state, send, service } = useGameMenuMachine({ state: persistedState })
-  service.onTransition((state) => {
-    localStorage.setItem('game-menu-state', JSON.stringify(state))
-  })
+  const { state, send } = useGameMenuMachine()
 
   onClickOutside(target, (event) => closeMenu())
 </script>

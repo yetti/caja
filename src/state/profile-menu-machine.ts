@@ -59,7 +59,7 @@ const profileMenuMachine = createMachine<
   ProfileMenuEvent,
   ProfileMenuState
 >({
-  id: 'userMenu',
+  id: 'profileMenu',
   initial: 'idle',
   states: {
     idle: {
@@ -81,8 +81,6 @@ const profileMenuMachine = createMachine<
   },
 })
 
-export const useProfileMenuMachine = function ({
-  state: string = {},
-}): ProfileMenuMachine {
+export const useProfileMenuMachine = function (): ProfileMenuMachine {
   return useMachine(profileMenuMachine)
 }

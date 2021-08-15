@@ -74,8 +74,6 @@ const userMenuMachine = createMachine<
   },
 })
 
-export const useUserMenuMachine = function ({
-  state: string = {},
-}): UserMenuMachine {
+export const useUserMenuMachine = function (): UserMenuMachine {
   return useMachine(userMenuMachine)
 }

@@ -166,14 +166,7 @@
     send({ type: 'CLOSE_USER_MENU' })
   }
 
-  const persistedState = JSON.parse(
-    localStorage.getItem('user-menu-state') ?? '{}'
-  )
-
-  const { state, send, service } = useUserMenuMachine({ state: persistedState })
-  service.onTransition((state) => {
-    localStorage.setItem('user-menu-state', JSON.stringify(state))
-  })
+  const { state, send } = useUserMenuMachine()
 
   onClickOutside(target, (event) => closeMenu())
 </script>
