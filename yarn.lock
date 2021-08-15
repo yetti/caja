@@ -2181,6 +2181,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xstate/vue@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@xstate/vue@npm:0.8.0"
+  peerDependencies:
+    "@xstate/fsm": ^1.0.0
+    vue: ^3.0.0
+    xstate: ^4.7.8
+  peerDependenciesMeta:
+    "@xstate/fsm":
+      optional: true
+    xstate:
+      optional: true
+  checksum: dfd6c27e1c23f9232206392ec87ba477ba36577dd29ffad3a380fcdf70b0a5f296060eb2b119d1b249c3f7b23802879d88502e22b7ae2bc9b129c4be99502ad1
+  languageName: node
+  linkType: hard
+
 "@yetti-bytes/caja@workspace:.":
   version: 0.0.0-use.local
   resolution: "@yetti-bytes/caja@workspace:."
@@ -2201,6 +2217,7 @@ __metadata:
     "@vue/server-renderer": ^3.2.2
     "@vueuse/core": ^5.3.0
     "@vueuse/head": ^0.6.0
+    "@xstate/vue": ^0.8.0
     critters: ^0.0.10
     cross-env: ^7.0.3
     cypress: ^8.2.0
