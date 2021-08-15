@@ -27,14 +27,7 @@
 <script setup lang="ts">
   import { useSidebarMachine } from '~/state/sidebar-machine'
 
-  const persistedState = JSON.parse(
-    localStorage.getItem('user-menu-state') ?? '{}'
-  )
-
-  const { state, send, service } = useSidebarMachine({ state: persistedState })
-  service.onTransition((state) => {
-    localStorage.setItem('sidebar-state', JSON.stringify(state))
-  })
+  const { state, send } = useSidebarMachine()
 
   const toggleSidebar = () => {
     send({ type: 'TOGGLE_SIDEBAR' })

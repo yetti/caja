@@ -74,8 +74,6 @@ const sidebarMachine = createMachine<
   },
 })
 
-export const useSidebarMachine = function ({
-  state: string = {},
-}): SidebarMachine {
+export const useSidebarMachine = function (): SidebarMachine {
   return useMachine(sidebarMachine)
 }
