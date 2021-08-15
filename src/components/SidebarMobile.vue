@@ -1,6 +1,6 @@
 <template>
   <div
-    v-show="props.visible"
+    v-if="props.visible"
     class="fixed inset-0 flex z-40 lg:hidden"
     role="dialog"
     aria-modal="true"
@@ -319,6 +319,7 @@
     </div>
   </div>
 </template>
+
 <script setup lang="ts">
   const props = defineProps<{
     visible: boolean
