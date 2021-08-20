@@ -18,7 +18,10 @@
       <div class="absolute inset-0 overflow-hidden">
         <!-- Background overlay, show/hide based on slide-over state. -->
         <div class="absolute inset-0" aria-hidden="true">
-          <div class="fixed inset-y-0 pl-16 max-w-full right-0 flex">
+          <div
+            class="fixed inset-y-0 sm:pl-16 max-w-full right-0 flex"
+            ref="target"
+          >
             <!--
             Slide-over panel, show/hide based on slide-over state.
             -->

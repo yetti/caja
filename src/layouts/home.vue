@@ -22,7 +22,7 @@
                   class="text-lg font-medium text-white"
                   id="slide-over-title"
                 >
-                  New Project
+                  Add Game
                 </h2>
                 <div class="ml-3 h-7 flex items-center">
                   <button
@@ -58,132 +58,225 @@
               </div>
               <div class="mt-1">
                 <p class="text-sm text-indigo-300">
-                  Get started by filling in the information below to create your
-                  new project.
+                  Get started by entering the game name or game ID.
                 </p>
               </div>
             </div>
             <div class="flex-1 flex flex-col justify-between">
-              <div class="px-4 divide-y divide-gray-200 sm:px-6">
+              <div class="px-4 sm:px-6">
                 <div class="space-y-6 pt-6 pb-5">
                   <div>
                     <label
-                      for="project-name"
-                      class="block text-sm font-medium text-gray-900"
+                      for="game-name"
+                      class="block text-sm font-medium text-gray-700"
+                      >Game name</label
                     >
-                      Project name
-                    </label>
-                    <div class="mt-1">
-                      <input
-                        type="text"
-                        name="project-name"
-                        id="project-name"
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <div
                         class="
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          focus:ring-indigo-500 focus:border-indigo-500
-                          border-gray-300
-                          rounded-md
+                          relative
+                          flex
+                          items-stretch
+                          flex-grow
+                          focus-within:z-10
                         "
-                      />
+                      >
+                        <input
+                          type="text"
+                          name="game-name"
+                          id="game-name"
+                          class="
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            rounded-none rounded-l-md
+                            sm:text-sm
+                            border-gray-300
+                          "
+                          placeholder="Carcassonne"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        class="
+                          -ml-px
+                          relative
+                          inline-flex
+                          items-center
+                          space-x-2
+                          px-4
+                          py-2
+                          border border-gray-300
+                          text-sm
+                          font-medium
+                          rounded-r-md
+                          text-gray-700
+                          bg-gray-50
+                          hover:bg-gray-100
+                          focus:outline-none
+                          focus:ring-1
+                          focus:ring-indigo-500
+                          focus:border-indigo-500
+                        "
+                      >
+                        <!-- Heroicon name: solid/search -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 text-gray-400"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <span>Search</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="relative">
+                    <div
+                      class="absolute inset-0 flex items-center"
+                      aria-hidden="true"
+                    >
+                      <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                      <span class="px-2 bg-white text-sm text-gray-500">
+                        OR
+                      </span>
                     </div>
                   </div>
                   <div>
                     <label
-                      for="description"
-                      class="block text-sm font-medium text-gray-900"
+                      for="game-name"
+                      class="block text-sm font-medium text-gray-700"
+                      >Game name</label
                     >
-                      Description
-                    </label>
-                    <div class="mt-1">
-                      <textarea
-                        id="description"
-                        name="description"
-                        rows="4"
+                    <div class="mt-1 flex rounded-md shadow-sm">
+                      <div
                         class="
-                          block
-                          w-full
-                          shadow-sm
-                          sm:text-sm
-                          focus:ring-indigo-500 focus:border-indigo-500
-                          border border-gray-300
-                          rounded-md
+                          relative
+                          flex
+                          items-stretch
+                          flex-grow
+                          focus-within:z-10
                         "
-                      ></textarea>
+                      >
+                        <input
+                          type="text"
+                          name="game-name"
+                          id="game-name"
+                          class="
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            rounded-none rounded-l-md
+                            sm:text-sm
+                            border-gray-300
+                          "
+                          placeholder="Carcassonne"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        class="
+                          -ml-px
+                          relative
+                          inline-flex
+                          items-center
+                          space-x-2
+                          px-4
+                          py-2
+                          border border-gray-300
+                          text-sm
+                          font-medium
+                          rounded-r-md
+                          text-gray-700
+                          bg-gray-50
+                          hover:bg-gray-100
+                          focus:outline-none
+                          focus:ring-1
+                          focus:ring-indigo-500
+                          focus:border-indigo-500
+                        "
+                      >
+                        <!-- Heroicon name: solid/search -->
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5 text-gray-400"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <span>Search</span>
+                      </button>
                     </div>
                   </div>
-                  <div>
-                    <h3 class="text-sm font-medium text-gray-900">
-                      Team Members
-                    </h3>
-                    <div class="mt-2">
-                      <div class="flex space-x-2">
-                        <a href="#" class="rounded-full hover:opacity-75">
-                          <img
-                            class="inline-block h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Tom Cook"
-                          />
-                        </a>
-
-                        <a href="#" class="rounded-full hover:opacity-75">
-                          <img
-                            class="inline-block h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Whitney Francis"
-                          />
-                        </a>
-
-                        <a href="#" class="rounded-full hover:opacity-75">
-                          <img
-                            class="inline-block h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Leonard Krasner"
-                          />
-                        </a>
-
-                        <a href="#" class="rounded-full hover:opacity-75">
-                          <img
-                            class="inline-block h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Floyd Miles"
-                          />
-                        </a>
-
-                        <a href="#" class="rounded-full hover:opacity-75">
-                          <img
-                            class="inline-block h-8 w-8 rounded-full"
-                            src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="Emily Selman"
-                          />
-                        </a>
-
+                </div>
+                <div class="mt-10">
+                  <h3
+                    class="
+                      text-xs
+                      font-semibold
+                      text-gray-500
+                      uppercase
+                      tracking-wide
+                    "
+                  >
+                    Search Results
+                  </h3>
+                  <ul
+                    role="list"
+                    class="
+                      mt-4
+                      border-t border-b border-gray-200
+                      divide-y divide-gray-200
+                    "
+                  >
+                    <li
+                      class="py-4 flex items-center justify-between space-x-3"
+                    >
+                      <div class="min-w-0 flex-1 flex items-center space-x-3">
+                        <div class="min-w-0 flex-1">
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Carcassonne
+                          </p>
+                          <p class="text-sm font-medium text-gray-500 truncate">
+                            Front-end Developer
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex-shrink-0">
                         <button
                           type="button"
                           class="
-                            flex-shrink-0
-                            bg-white
                             inline-flex
-                            h-8
-                            w-8
                             items-center
-                            justify-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
                             rounded-full
-                            border-2 border-dashed border-gray-200
-                            text-gray-400
-                            hover:text-gray-500 hover:border-gray-300
+                            bg-gray-100
+                            hover:bg-gray-200
                             focus:outline-none
                             focus:ring-2
                             focus:ring-offset-2
                             focus:ring-indigo-500
                           "
                         >
-                          <span class="sr-only">Add team member</span>
-                          <!-- Heroicon name: solid/plus -->
+                          <!-- Heroicon name: solid/plus-sm -->
                           <svg
-                            class="h-5 w-5"
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                             fill="currentColor"
@@ -191,235 +284,342 @@
                           >
                             <path
                               fill-rule="evenodd"
-                              d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
+                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
                               clip-rule="evenodd"
                             />
                           </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            Add <span class="sr-only">Carcassonne</span>
+                          </span>
+                        </button>
+                        <button
+                          type="button"
+                          class="
+                            inline-flex
+                            items-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
+                            rounded-full
+                            bg-gray-100
+                            hover:bg-gray-200
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-offset-2
+                            focus:ring-indigo-500
+                          "
+                        >
+                          <!-- Heroicon name: outline/eye -->
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            View <span class="sr-only">Carcassonne</span>
+                          </span>
                         </button>
                       </div>
-                    </div>
-                  </div>
-                  <fieldset>
-                    <legend class="text-sm font-medium text-gray-900">
-                      Privacy
-                    </legend>
-                    <div class="mt-2 space-y-5">
-                      <div class="relative flex items-start">
-                        <div class="absolute flex items-center h-5">
-                          <input
-                            id="privacy-public"
-                            name="privacy"
-                            aria-describedby="privacy-public-description"
-                            type="radio"
-                            class="
-                              focus:ring-indigo-500
-                              h-4
-                              w-4
-                              text-indigo-600
-                              border-gray-300
-                            "
-                            checked
-                          />
-                        </div>
-                        <div class="pl-7 text-sm">
-                          <label
-                            for="privacy-public"
-                            class="font-medium text-gray-900"
-                          >
-                            Public access
-                          </label>
-                          <p
-                            id="privacy-public-description"
-                            class="text-gray-500"
-                          >
-                            Everyone with the link will see this project.
+                    </li>
+
+                    <li
+                      class="py-4 flex items-center justify-between space-x-3"
+                    >
+                      <div class="min-w-0 flex-1 flex items-center space-x-3">
+                        <div class="min-w-0 flex-1">
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Carcassonne
+                          </p>
+                          <p class="text-sm font-medium text-gray-500 truncate">
+                            Front-end Developer
                           </p>
                         </div>
                       </div>
-                      <div>
-                        <div class="relative flex items-start">
-                          <div class="absolute flex items-center h-5">
-                            <input
-                              id="privacy-private-to-project"
-                              name="privacy"
-                              aria-describedby="privacy-private-to-project-description"
-                              type="radio"
-                              class="
-                                focus:ring-indigo-500
-                                h-4
-                                w-4
-                                text-indigo-600
-                                border-gray-300
-                              "
+                      <div class="flex-shrink-0">
+                        <button
+                          type="button"
+                          class="
+                            inline-flex
+                            items-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
+                            rounded-full
+                            bg-gray-100
+                            hover:bg-gray-200
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-offset-2
+                            focus:ring-indigo-500
+                          "
+                        >
+                          <!-- Heroicon name: solid/plus-sm -->
+                          <svg
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                              clip-rule="evenodd"
                             />
-                          </div>
-                          <div class="pl-7 text-sm">
-                            <label
-                              for="privacy-private-to-project"
-                              class="font-medium text-gray-900"
-                            >
-                              Private to project members
-                            </label>
-                            <p
-                              id="privacy-private-to-project-description"
-                              class="text-gray-500"
-                            >
-                              Only members of this project would be able to
-                              access.
-                            </p>
-                          </div>
+                          </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            Add <span class="sr-only">Carcassonne</span>
+                          </span>
+                        </button>
+                        <button
+                          type="button"
+                          class="
+                            inline-flex
+                            items-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
+                            rounded-full
+                            bg-gray-100
+                            hover:bg-gray-200
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-offset-2
+                            focus:ring-indigo-500
+                          "
+                        >
+                          <!-- Heroicon name: outline/eye -->
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            View <span class="sr-only">Carcassonne</span>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+
+                    <li
+                      class="py-4 flex items-center justify-between space-x-3"
+                    >
+                      <div class="min-w-0 flex-1 flex items-center space-x-3">
+                        <div class="min-w-0 flex-1">
+                          <p class="text-sm font-medium text-gray-900 truncate">
+                            Carcassonne
+                          </p>
+                          <p class="text-sm font-medium text-gray-500 truncate">
+                            Front-end Developer
+                          </p>
                         </div>
                       </div>
-                      <div>
-                        <div class="relative flex items-start">
-                          <div class="absolute flex items-center h-5">
-                            <input
-                              id="privacy-private"
-                              name="privacy"
-                              aria-describedby="privacy-private-to-project-description"
-                              type="radio"
-                              class="
-                                focus:ring-indigo-500
-                                h-4
-                                w-4
-                                text-indigo-600
-                                border-gray-300
-                              "
+                      <div class="flex-shrink-0">
+                        <button
+                          type="button"
+                          class="
+                            inline-flex
+                            items-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
+                            rounded-full
+                            bg-gray-100
+                            hover:bg-gray-200
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-offset-2
+                            focus:ring-indigo-500
+                          "
+                        >
+                          <!-- Heroicon name: solid/plus-sm -->
+                          <svg
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                              clip-rule="evenodd"
                             />
-                          </div>
-                          <div class="pl-7 text-sm">
-                            <label
-                              for="privacy-private"
-                              class="font-medium text-gray-900"
-                            >
-                              Private to you
-                            </label>
-                            <p
-                              id="privacy-private-description"
-                              class="text-gray-500"
-                            >
-                              You are the only one able to access this project.
-                            </p>
-                          </div>
-                        </div>
+                          </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            Add <span class="sr-only">Carcassonne</span>
+                          </span>
+                        </button>
+                        <button
+                          type="button"
+                          class="
+                            inline-flex
+                            items-center
+                            py-2
+                            px-2
+                            xl:px-3
+                            mx-1
+                            border border-transparent
+                            rounded-full
+                            bg-gray-100
+                            hover:bg-gray-200
+                            focus:outline-none
+                            focus:ring-2
+                            focus:ring-offset-2
+                            focus:ring-indigo-500
+                          "
+                        >
+                          <!-- Heroicon name: outline/eye -->
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="ml-0.5 xl:-ml-1 mr-0.5 h-5 w-5 text-gray-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                            />
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            />
+                          </svg>
+                          <span
+                            class="
+                              text-sm
+                              font-medium
+                              text-gray-900
+                              hidden
+                              xl:block
+                            "
+                          >
+                            View <span class="sr-only">Carcassonne</span>
+                          </span>
+                        </button>
                       </div>
-                    </div>
-                  </fieldset>
+                    </li>
+                  </ul>
                 </div>
-                <div class="pt-4 pb-6">
-                  <div class="flex text-sm">
-                    <a
-                      href="#"
-                      class="
-                        group
-                        inline-flex
-                        items-center
-                        font-medium
-                        text-indigo-600
-                        hover:text-indigo-900
-                      "
-                    >
-                      <!-- Heroicon name: solid/link -->
-                      <svg
-                        class="
-                          h-5
-                          w-5
-                          text-indigo-500
-                          group-hover:text-indigo-900
-                        "
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <span class="ml-2"> Copy link </span>
-                    </a>
+                <div class="relative mt-10 mb-10">
+                  <div
+                    class="absolute inset-0 flex items-center"
+                    aria-hidden="true"
+                  >
+                    <div class="w-full border-t border-gray-300"></div>
                   </div>
-                  <div class="mt-4 flex text-sm">
-                    <a
-                      href="#"
+                  <div class="relative flex justify-center">
+                    <button
+                      type="button"
                       class="
-                        group
                         inline-flex
                         items-center
-                        text-gray-500
-                        hover:text-gray-900
+                        shadow-sm
+                        px-4
+                        py-1.5
+                        border border-gray-300
+                        text-sm
+                        leading-5
+                        font-medium
+                        rounded-full
+                        text-gray-700
+                        bg-white
+                        hover:bg-gray-50
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-offset-2
+                        focus:ring-indigo-500
                       "
                     >
-                      <!-- Heroicon name: solid/question-mark-circle -->
-                      <svg
-                        class="h-5 w-5 text-gray-400 group-hover:text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                          clip-rule="evenodd"
-                        />
-                      </svg>
-                      <span class="ml-2"> Learn more about sharing </span>
-                    </a>
+                      <span>See all results</span>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="flex-shrink-0 px-4 py-4 flex justify-end">
-            <button
-              @click="closeSlideover()"
-              type="button"
-              class="
-                bg-white
-                py-2
-                px-4
-                border border-gray-300
-                rounded-md
-                shadow-sm
-                text-sm
-                font-medium
-                text-gray-700
-                hover:bg-gray-50
-                focus:outline-none
-                focus:ring-2
-                focus:ring-offset-2
-                focus:ring-indigo-500
-              "
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              class="
-                ml-4
-                inline-flex
-                justify-center
-                py-2
-                px-4
-                border border-transparent
-                shadow-sm
-                text-sm
-                font-medium
-                rounded-md
-                text-white
-                bg-indigo-600
-                hover:bg-indigo-700
-                focus:outline-none
-                focus:ring-2
-                focus:ring-offset-2
-                focus:ring-indigo-500
-              "
-            >
-              Save
-            </button>
           </div>
         </form>
       </div>
