@@ -1,10 +1,6 @@
 <template>
   <div class="relative h-screen flex overflow-hidden bg-white">
-    <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-    <SidebarMobile
-      :visible="sidebarState.matches('visible')"
-      @close-sidebar="closeSidebar()"
-    ></SidebarMobile>
+    <!-- off-canvas slide over -->
     <Slideover
       :visible="slideoverState.matches('visible')"
       @close-slideover="closeSlideover()"
@@ -428,6 +424,11 @@
         </form>
       </div>
     </Slideover>
+    <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
+    <SidebarMobile
+      :visible="sidebarState.matches('visible')"
+      @close-sidebar="closeSidebar()"
+    ></SidebarMobile>
 
     <!-- Static sidebar for desktop -->
     <SidebarDesktop></SidebarDesktop>

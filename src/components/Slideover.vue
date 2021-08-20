@@ -1,16 +1,16 @@
 <template>
   <transition
     enter-active-class="transform transition ease-in-out duration-500 sm:duration-700"
-    enter-class="translate-x-full"
+    enter-from-class="translate-x-full"
     enter-to-class="translate-x-0"
     leave-active-class="transform transition ease-in-out duration-500 sm:duration-700"
-    leave-class="translate-x-0"
+    leave-from-class="translate-x-0"
     leave-to-class="translate-x-full"
     appear
   >
     <div
       v-show="props.visible"
-      class="fixed inset-0 overflow-hidden z-50"
+      class="fixed inset-0 overflow-hidden z-50 h-screen"
       aria-labelledby="slide-over-title"
       role="dialog"
       aria-modal="true"
