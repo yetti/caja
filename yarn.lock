@@ -1580,6 +1580,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@netlify/functions@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "@netlify/functions@npm:0.7.2"
+  dependencies:
+    is-promise: ^4.0.0
+  checksum: 962d2142a573995fd05593a7c80a8f71d4410de80cb3a52a9fa51184b8c7a309b3925c55d8f8e4e7c1730dc9776aa82c78264040458375fc34d0deb60a651a5a
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -2206,6 +2215,7 @@ __metadata:
     "@cypress/vue": next
     "@iconify/json": ^1.1.386
     "@intlify/vite-plugin-vue-i18n": ^2.4.0
+    "@netlify/functions": ^0.7.2
     "@types/nprogress": ^0.2.0
     "@typescript-eslint/eslint-plugin": ^4.29.1
     "@typescript-eslint/parser": ^4.29.1
@@ -5482,6 +5492,13 @@ fsevents@~2.3.2:
   version: 2.2.2
   resolution: "is-promise@npm:2.2.2"
   checksum: 18bf7d1c59953e0ad82a1ed963fb3dc0d135c8f299a14f89a17af312fc918373136e56028e8831700e1933519630cc2fd4179a777030330fde20d34e96f40c78
+  languageName: node
+  linkType: hard
+
+"is-promise@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-promise@npm:4.0.0"
+  checksum: 0b46517ad47b00b6358fd6553c83ec1f6ba9acd7ffb3d30a0bf519c5c69e7147c132430452351b8a9fc198f8dd6c4f76f8e6f5a7f100f8c77d57d9e0f4261a8a
   languageName: node
   linkType: hard
 

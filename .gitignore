@@ -12,3 +12,5 @@ components.d.ts
 *.log
 # yarn
 .yarn/
+# Local Netlify folder
+.netlify
