@@ -5,7 +5,7 @@
       :visible="slideoverState.matches('visible')"
       @close-slideover="closeSlideover()"
     >
-      <div class="w-screen max-w-md" ref="target">
+      <div class="w-screen max-w-md h-full">
         <form
           class="
             h-full

@@ -19,14 +19,13 @@
         <div class="absolute inset-0 overflow-hidden">
           <!-- Background overlay, show/hide based on slide-over state. -->
           <div class="absolute inset-0" aria-hidden="true">
-            <div
-              class="fixed inset-y-0 sm:pl-16 max-w-full right-0 flex"
-              ref="target"
-            >
-              <!--
+            <div class="fixed inset-y-0 sm:pl-16 max-w-full right-0 flex">
+              <OnClickOutside @trigger="closeSlideover">
+                <!--
             Slide-over panel, show/hide based on slide-over state.
             -->
-              <slot></slot>
+                <slot></slot>
+              </OnClickOutside>
             </div>
           </div>
         </div>
@@ -36,9 +35,8 @@
 </template>
 
 <script setup lang="ts">
-  import { onClickOutside } from '@vueuse/core'
+  import { OnClickOutside } from '@vueuse/components'
 
-  const target = ref('')
   const props = defineProps<{
     visible: boolean
   }>()
@@ -50,6 +48,4 @@
   const closeSlideover = () => {
     emit('closeSlideover')
   }
-
-  onClickOutside(target, (event) => closeSlideover())
 </script>

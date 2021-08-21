@@ -2136,6 +2136,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/components@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@vueuse/components@npm:6.0.0"
+  dependencies:
+    "@vueuse/core": 6.0.0
+    "@vueuse/shared": 6.0.0
+    vue-demi: "*"
+  checksum: 7d3d10dd1cd4091500c2b3160b263889d5b3a6673dcd42df8feed36dcc5ad4683e42defaa5c94d8b27fb36748da3bac1f4fd7be58c8dd4fb754eacffc10d94ae
+  languageName: node
+  linkType: hard
+
+"@vueuse/core@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@vueuse/core@npm:6.0.0"
+  dependencies:
+    "@vueuse/shared": 6.0.0
+    vue-demi: "*"
+  peerDependencies:
+    "@vue/composition-api": ^1.1.0
+    vue: ^2.6.0 || ^3.2.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    vue:
+      optional: true
+  checksum: 1c3d55c0540507baa5e087049d427517247288eac5b56f807dec42dcdb83b7ddb9800bf97e7b12b3823e9720565a2437a48ef9e7820840f9a08f334e1f1a96c9
+  languageName: node
+  linkType: hard
+
 "@vueuse/core@npm:^5.3.0":
   version: 5.3.0
   resolution: "@vueuse/core@npm:5.3.0"
@@ -2161,6 +2190,23 @@ __metadata:
   dependencies:
     vue-demi: "*"
   checksum: d7ca6280cdb187da39e45382c0918e1b8bb2edd627ea149e433785e747b368e0a37d88f510fbb9925b3d208e753dd3ca565b9850994f48fb570fd8265ce2ad3e
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@vueuse/shared@npm:6.0.0"
+  dependencies:
+    vue-demi: "*"
+  peerDependencies:
+    "@vue/composition-api": ^1.1.0
+    vue: ^2.6.0 || ^3.2.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+    vue:
+      optional: true
+  checksum: 19ccd32a124b73cd636666d3239db2243bf982373d86cc04eb09af6b9caaeb440cb02eb44e59b982ee9b0ece2e37afd6d58cc6b7e78c673a61c54449e6faf89c
   languageName: node
   linkType: hard
 
@@ -2225,6 +2271,7 @@ __metadata:
     "@vue/eslint-config-standard": ^6.1.0
     "@vue/eslint-config-typescript": ^7.0.0
     "@vue/server-renderer": ^3.2.2
+    "@vueuse/components": ^6.0.0
     "@vueuse/core": ^5.3.0
     "@vueuse/head": ^0.6.0
     "@xstate/vue": ^0.8.0
