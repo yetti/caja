@@ -18,7 +18,8 @@
       "vite/client",
       "vite-plugin-pages/client",
       "vite-plugin-vue-layouts/client",
-      "cypress"
+      "cypress",
+      "@cypress/vite-dev-server"
     ],
     "paths": {
       "~/*": ["src/*"]
