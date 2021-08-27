@@ -6,7 +6,7 @@ import {
 } from '@netlify/functions'
 import bggXmlApiClient from 'bgg-xml-api-client'
 
-interface BggQueryParams {
+interface BggSearchParams {
   name?: string
 }
 
@@ -14,7 +14,7 @@ export const handler: Handler = async (
   event: HandlerEvent,
   context: HandlerContext
 ) => {
-  const { name } = event.queryStringParameters as BggQueryParams
+  const { name } = event.queryStringParameters as BggSearchParams
 
   let response: HandlerResponse = {
     statusCode: 500,

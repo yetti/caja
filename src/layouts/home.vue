@@ -6,7 +6,7 @@
       @close-slideover="closeSlideover()"
     >
       <div class="w-screen max-w-md h-full">
-        <form
+        <div
           class="
             h-full
             divide-y divide-gray-200
@@ -22,7 +22,7 @@
                   class="text-lg font-medium text-white"
                   id="slide-over-title"
                 >
-                  Add Game
+                  Quick Add
                 </h2>
                 <div class="ml-3 h-7 flex items-center">
                   <button
@@ -58,7 +58,7 @@
               </div>
               <div class="mt-1">
                 <p class="text-sm text-indigo-300">
-                  Get started by entering the game name or game ID.
+                  Get started by entering the game name.
                 </p>
               </div>
             </div>
@@ -68,7 +68,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </Slideover>
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->

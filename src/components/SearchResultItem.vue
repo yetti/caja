@@ -48,8 +48,9 @@
           Add <span class="sr-only">{{ itemName }}</span>
         </span>
       </button>
-      <button
-        type="button"
+      <a
+        :href="itemUrl"
+        target="_blank"
         class="
           inline-flex
           items-center
@@ -91,7 +92,7 @@
         <span class="text-sm font-medium text-gray-900 hidden xl:block">
           View <span class="sr-only">{{ itemName }}</span>
         </span>
-      </button>
+      </a>
     </div>
   </li>
 </template>
@@ -106,4 +107,5 @@
 
   const itemName = ref(decode(props.item.name.value))
   const itemType = ref(props.item.type)
+  const itemUrl = ref(`https://boardgamegeek.com/boardgame/${props.item.id}`)
 </script>
