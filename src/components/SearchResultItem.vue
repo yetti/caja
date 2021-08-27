@@ -44,15 +44,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        <span
-          class="
-            text-sm
-            font-medium
-            text-gray-900
-            hidden
-            xl:block
-          "
-        >
+        <span class="text-sm font-medium text-gray-900 hidden xl:block">
           Add <span class="sr-only">{{ itemName }}</span>
         </span>
       </button>
@@ -96,15 +88,7 @@
             d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
           />
         </svg>
-        <span
-          class="
-            text-sm
-            font-medium
-            text-gray-900
-            hidden
-            xl:block
-          "
-        >
+        <span class="text-sm font-medium text-gray-900 hidden xl:block">
           View <span class="sr-only">{{ itemName }}</span>
         </span>
       </button>
@@ -113,13 +97,13 @@
 </template>
 
 <script setup lang="ts">
+  import { decode } from 'html-entities'
   import { SearchResultItem } from '~/models/search'
 
   const props = defineProps<{
     item: SearchResultItem
   }>()
 
-  const itemName = ref(props.item.name.value)
+  const itemName = ref(decode(props.item.name.value))
   const itemType = ref(props.item.type)
-
 </script>

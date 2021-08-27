@@ -53,11 +53,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-  const search = () => {
-    console.log('searching...')
-  }
-</script>
+<script setup lang="ts"></script>
 
 <route lang="yaml">
 meta:

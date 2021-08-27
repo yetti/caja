@@ -32,6 +32,7 @@
     "@xstate/vue": "^0.8.0",
     "bgg-xml-api-client": "^0.1.8",
     "cypress": "^8.3.0",
+    "html-entities": "^2.3.2",
     "ky": "^0.28.5",
     "node-fetch": "^2.6.1",
     "nprogress": "^0.2.0",

@@ -64,31 +64,51 @@
       </div>
     </div>
   </div>
-  <SearchResults :results="searchResults"></SearchResults>
+  <div class="mt-10">
+    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+      Search Results ({{ response.total }})
+    </h3>
+    <ul
+      v-if="hasSearchResults()"
+      role="list"
+      class="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200"
+    >
+      <SearchResultItem
+        v-for="item in response.item"
+        :item="item"
+      ></SearchResultItem>
+    </ul>
+  </div>
 </template>
 
 <script setup lang="ts">
-  import { SearchResult, SearchResultItem } from '~/models/search'
+  import SearchResultItem from '~/components/SearchResultItem.vue'
   import ky from 'ky'
+  import { SearchResult } from '~/models/search'
 
   let gameName = ref('')
 
-  const searchResultItems: SearchResultItem[] = []
-
-  const searchResults = ref({
+  let response = ref<SearchResult>({
     total: '0',
     termsofuse: '',
-    item: searchResultItems,
+    item: [],
   })
 
   const search = async () => {
-    console.log('searching...')
-    const response: SearchResult = await ky
+    response.value = {
+      total: '0',
+      termsofuse: '',
+      item: [],
+    }
+
+    const res: SearchResult = await ky
       .get(`/api/search-bgg?name=${gameName.value}`)
       .json()
 
-    searchResults.value = response
+    response.value = res
+  }
 
-    console.log('response', searchResults.value)
+  const hasSearchResults = () => {
+    return response.value.item && response.value.item.length > 0
   }
 </script>

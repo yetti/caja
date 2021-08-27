@@ -7,10 +7,10 @@ dist-ssr
 node_modules
 components.d.ts
 # intellij stuff
-.idea/
+.idea
 # logs
 *.log
 # yarn
-.yarn/
+.yarn
 # Local Netlify folder
 .netlify
