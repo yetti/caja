@@ -14,7 +14,7 @@
       <HeaderMobile @toggle-sidebar="toggleSidebar()"></HeaderMobile>
       <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none">
         <!-- Page title & actions -->
-        <HeaderDesktop></HeaderDesktop>>
+        <HeaderDesktop></HeaderDesktop>
 
         <div class="px-4 mt-6 sm:px-6 lg:px-8">
           <router-view></router-view>
